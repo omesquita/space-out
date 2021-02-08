@@ -3,7 +3,9 @@
 name: Issue-Check
 
 # Controls when the action will run. 
-on: pull_request
+on:
+  pull_request:
+    types: [ labeled ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -12,6 +14,7 @@ jobs:
     name: Issue Check
      
     # The type of runner that the job will run on
+    if: ${{ github.event.label.name == 'bug' }}
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
