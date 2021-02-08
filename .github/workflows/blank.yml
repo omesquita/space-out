@@ -33,6 +33,4 @@ jobs:
 
       - name: Run phyton
         run: |
-          echo ${{ secrets.SECRET_TOKEN }}
-          echo "gt = $GITHUB_TOKEN"
-          python3 issue_validation.py ${{ github.event.pull_request.title }}
+          python3 issue_validation.py ${{ secrets.SECRET_TOKEN }}
