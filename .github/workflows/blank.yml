@@ -35,4 +35,5 @@ jobs:
         env: TOKEN = ${{ secrets.SPACE_OUT_TOKEN }}
         run: |
           echo " Token %TOKEN%"
+          echo "gt = $GITHUB_TOKEN"
           python3 issue_validation.py ${{ github.event.pull_request.title }}
