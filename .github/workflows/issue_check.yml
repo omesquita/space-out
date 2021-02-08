@@ -35,4 +35,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           pip install requests
-          python3 issue_validation.py githu.event.pull_request.title
+          python3 issue_validation.py ${{ github.event.pull_request.title }}
