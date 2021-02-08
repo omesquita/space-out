@@ -7,7 +7,7 @@ REPO_API = "https://api.github.com/repos"
 PROJECT_PATH = "/omesquita/space-out"
 
 headers = {
-    'Authorization': 'Token 8cf33eed7fa3ec3a3d6c6509c33d47cf41c509d9',
+    'Authorization': 'Token 96d32031487051da8adaa63af99f9cf8db27d21c',
     'Accept': 'application/vnd.github.v3+json'
 }
 
