@@ -28,4 +28,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${{ github.event.label.name }}
+          echo "label: ${{ github.event.label.name }}"
