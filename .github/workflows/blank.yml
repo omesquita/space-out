@@ -33,4 +33,4 @@ jobs:
 
       - name: Run phyton
         run: |
-          python3 issue_validation.py ${{ secrets.SECRET_TOKEN }}
+          python3 issue_validation.py ${{ secrets.SPACE_OUT_TOKEN }}
