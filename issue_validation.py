@@ -16,6 +16,7 @@ issue_endpoint = f'{REPO_API}{PROJECT_PATH}/issues'
 
 
 def get_jira_id_from_title(title: str):
+    print(f'Get jira id from title pr {title}')
     match = re.search(r'(^\[\w+\])\[(\w+-\d+)\]', title)
     try:
         return match.group(2)
@@ -24,6 +25,7 @@ def get_jira_id_from_title(title: str):
 
 
 def check_if_issue_has_same_jira_id(issue_title: str, jira_id: str):
+    print(f'Check jira id {jira_id} in issue {issue_title}')
     match = re.search(r'(^\[(ANDROID|IOS)\])\[(\w+-\d+)\]', issue_title)
     try:
         return match.group(3) == jira_id
