@@ -32,8 +32,7 @@ jobs:
         
 
       - name: Run phyton
-        env: TOKEN = ${{ secrets.SPACE_OUT_TOKEN }}
         run: |
-          echo " Token %TOKEN%"
+          echo ${{ secrets.SECRET_TOKEN }}
           echo "gt = $GITHUB_TOKEN"
           python3 issue_validation.py ${{ github.event.pull_request.title }}
